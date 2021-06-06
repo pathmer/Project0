@@ -1,10 +1,10 @@
-package PackageB;
+package com.pathmer.project0.driver;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
-import PackageA.User;
+import com.pathmer.project0.beans.User;
 
 @SuppressWarnings("serial")
 public class Main {
