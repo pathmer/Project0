@@ -1,78 +1,99 @@
 package com.pathmer.project0.beans;
 
-public abstract class User {
+public class User {
 	private Integer id;
 	private String utype;
-	private String username;
+	private String usernames;
 	private String passwords;
-	private Integer social;
+	private Integer ssn;
 	private String firstname;
 	private String lastname;
-	private String status;
+	private String ustatus;
 	
 	
-	public User(Integer id, String utype, String username, String passwords, Integer social, String firstname,
+	public User() {
+		super();
+	}
+
+	public User(Integer id, String utype, String usernames, String passwords, Integer ssn, String firstname,
 			String lastname, String status) {
 		super();
 		this.id = id;
 		this.utype = utype;
-		this.username = username;
+		this.usernames = usernames;
 		this.passwords = passwords;
-		this.social = social;
+		this.ssn = ssn;
 		this.firstname = firstname;
 		this.lastname = lastname;
-		this.status = status;
+		this.ustatus = status;
 	}
-	
+
 	
 	public Integer getId() {
 		return id;
 	}
+
 	public void setId(Integer id) {
 		this.id = id;
 	}
+
 	public String getUtype() {
 		return utype;
 	}
+
 	public void setUtype(String utype) {
 		this.utype = utype;
 	}
-	public String getUsername() {
-		return username;
+
+	public String getUsernames() {
+		return usernames;
 	}
-	public void setUsername(String username) {
-		this.username = username;
+
+	public void setUsernames(String usernames) {
+		this.usernames = usernames;
 	}
+
 	public String getPasswords() {
 		return passwords;
 	}
+
 	public void setPasswords(String passwords) {
 		this.passwords = passwords;
 	}
-	public Integer getSocial() {
-		return social;
+
+	public Integer getSsn() {
+		return ssn;
 	}
-	public void setSocial(Integer social) {
-		this.social = social;
+
+	public void setSsn(Integer ssn) {
+		this.ssn = ssn;
 	}
+
 	public String getFirstname() {
 		return firstname;
 	}
+
 	public void setFirstname(String firstname) {
 		this.firstname = firstname;
 	}
+
 	public String getLastname() {
 		return lastname;
 	}
+
 	public void setLastname(String lastname) {
 		this.lastname = lastname;
 	}
-	public String getStatus() {
-		return status;
+
+	public String getUstatus() {
+		return ustatus;
 	}
-	public void setStatus(String status) {
-		this.status = status;
+
+	public void setUstatus(String ustatus) {
+		this.ustatus = ustatus;
 	}
+
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -81,12 +102,13 @@ public abstract class User {
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		result = prime * result + ((lastname == null) ? 0 : lastname.hashCode());
 		result = prime * result + ((passwords == null) ? 0 : passwords.hashCode());
-		result = prime * result + ((social == null) ? 0 : social.hashCode());
-		result = prime * result + ((status == null) ? 0 : status.hashCode());
-		result = prime * result + ((username == null) ? 0 : username.hashCode());
+		result = prime * result + ((ssn == null) ? 0 : ssn.hashCode());
+		result = prime * result + ((usernames == null) ? 0 : usernames.hashCode());
+		result = prime * result + ((ustatus == null) ? 0 : ustatus.hashCode());
 		result = prime * result + ((utype == null) ? 0 : utype.hashCode());
 		return result;
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -116,20 +138,20 @@ public abstract class User {
 				return false;
 		} else if (!passwords.equals(other.passwords))
 			return false;
-		if (social == null) {
-			if (other.social != null)
+		if (ssn == null) {
+			if (other.ssn != null)
 				return false;
-		} else if (!social.equals(other.social))
+		} else if (!ssn.equals(other.ssn))
 			return false;
-		if (status == null) {
-			if (other.status != null)
+		if (usernames == null) {
+			if (other.usernames != null)
 				return false;
-		} else if (!status.equals(other.status))
+		} else if (!usernames.equals(other.usernames))
 			return false;
-		if (username == null) {
-			if (other.username != null)
+		if (ustatus == null) {
+			if (other.ustatus != null)
 				return false;
-		} else if (!username.equals(other.username))
+		} else if (!ustatus.equals(other.ustatus))
 			return false;
 		if (utype == null) {
 			if (other.utype != null)
@@ -140,12 +162,21 @@ public abstract class User {
 	}
 	
 	
+
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", utype=" + utype + ", username=" + username + ", passwords=" + passwords
-				+ ", social=" + social + ", firstname=" + firstname + ", lastname=" + lastname + ", status=" + status
-				+ "]";
+		return "User [ id=" + id + ", utype=" + utype + ", usernames=" + usernames + ", passwords=" + passwords
+				+ ", ssn=" + ssn + ", firstname=" + firstname + ", lastname=" + lastname + ", ustatus=" + ustatus
+				+ " ]";
 	}
 	
+	public String empView() {
+		if (id == null) {
+			return "No user selected.";
+		}
+		else {
+			return "userid=" + id + ", usernames=" + usernames + ", ssn=" + ssn + ", firstname=" + firstname +
+				", lastname=" + lastname + ", ustatus=" + ustatus;
+		}
+	}
 }
-

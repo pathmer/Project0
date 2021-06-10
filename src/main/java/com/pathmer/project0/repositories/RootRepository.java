@@ -13,8 +13,8 @@ public interface RootRepository<T> {
 	public List<T> getAll();
 	
 	// UPDATE
-	public boolean update(T t);
+	public T update(T t);
 	
 	// DELETE
-	public boolean delete(T t);
+	public boolean delete(Integer id);
 }

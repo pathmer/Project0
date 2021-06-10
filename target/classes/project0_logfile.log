@@ -1,0 +1,42 @@
+INFO  | 2021-06-09 17:25:21 | [main] driver.Main (Main.java:19) - Program started.
+INFO  | 2021-06-09 17:25:33 | [main] repositories.UserRepository (UserRepository.java:222) - User table view by username request.
+INFO  | 2021-06-09 17:25:33 | [main] repositories.AccountRepository (AccountRepository.java:234) - Account table view by account number request.
+INFO  | 2021-06-09 17:25:33 | [main] services.CustomerServices (CustomerServices.java:25) - Customer login successful.
+INFO  | 2021-06-09 17:25:36 | [main] driver.Main (Main.java:19) - Program started.
+INFO  | 2021-06-09 17:27:41 | [main] driver.Main (Main.java:19) - Program started.
+INFO  | 2021-06-09 17:28:19 | [main] repositories.UserRepository (UserRepository.java:222) - User table view by username request.
+INFO  | 2021-06-09 17:28:19 | [main] repositories.AccountRepository (AccountRepository.java:234) - Account table view by account number request.
+INFO  | 2021-06-09 17:28:19 | [main] services.CustomerServices (CustomerServices.java:25) - Customer login successful.
+INFO  | 2021-06-09 17:28:34 | [main] driver.Main (Main.java:19) - Program started.
+INFO  | 2021-06-09 19:04:27 | [main] repositories.UserRepository (UserRepository.java:254) - User table add record request.
+INFO  | 2021-06-09 19:04:27 | [main] repositories.UserRepository (UserRepository.java:85) - User table add record request.
+INFO  | 2021-06-09 19:04:27 | [main] repositories.UserRepository (UserRepository.java:55) - User table view by ID request.
+INFO  | 2021-06-09 19:04:27 | [main] repositories.UserRepository (UserRepository.java:22) - User table view all request.
+INFO  | 2021-06-09 19:04:27 | [main] repositories.UserRepository (UserRepository.java:22) - User table view all request.
+INFO  | 2021-06-09 19:04:27 | [main] repositories.UserRepository (UserRepository.java:128) - User table update record request.
+INFO  | 2021-06-09 19:04:27 | [main] repositories.UserRepository (UserRepository.java:55) - User table view by ID request.
+INFO  | 2021-06-09 19:04:27 | [main] repositories.UserRepository (UserRepository.java:190) - User table view by status request.
+INFO  | 2021-06-09 19:04:27 | [main] repositories.UserRepository (UserRepository.java:190) - User table view by status request.
+INFO  | 2021-06-09 19:04:27 | [main] repositories.UserRepository (UserRepository.java:223) - User table view by username request.
+INFO  | 2021-06-09 19:04:27 | [main] repositories.UserRepository (UserRepository.java:223) - User table view by username request.
+INFO  | 2021-06-09 19:04:27 | [main] repositories.UserRepository (UserRepository.java:170) - User table delete record request.
+INFO  | 2021-06-09 19:04:27 | [main] repositories.UserRepository (UserRepository.java:55) - User table view by ID request.
+INFO  | 2021-06-09 19:04:27 | [main] repositories.UserRepository (UserRepository.java:55) - User table view by ID request.
+INFO  | 2021-06-09 19:04:42 | [main] repositories.UserRepository (UserRepository.java:254) - User table add record request.
+INFO  | 2021-06-09 19:18:46 | [main] repositories.AccountRepository (AccountRepository.java:80) - Account table add record request.
+INFO  | 2021-06-09 19:22:58 | [main] repositories.AccountRepository (AccountRepository.java:80) - Account table add record request.
+INFO  | 2021-06-09 19:22:58 | [main] repositories.AccountRepository (AccountRepository.java:52) - Account table view by ID request.
+INFO  | 2021-06-09 19:25:41 | [main] repositories.AccountRepository (AccountRepository.java:81) - Account table add record request.
+INFO  | 2021-06-09 19:25:41 | [main] repositories.AccountRepository (AccountRepository.java:53) - Account table view by ID request.
+INFO  | 2021-06-09 19:29:40 | [main] repositories.AccountRepository (AccountRepository.java:81) - Account table add record request.
+INFO  | 2021-06-09 19:29:40 | [main] repositories.AccountRepository (AccountRepository.java:53) - Account table view by ID request.
+INFO  | 2021-06-09 19:31:13 | [main] repositories.AccountRepository (AccountRepository.java:81) - Account table add record request.
+INFO  | 2021-06-09 19:31:13 | [main] repositories.AccountRepository (AccountRepository.java:53) - Account table view by ID request.
+INFO  | 2021-06-09 19:33:53 | [main] repositories.AccountRepository (AccountRepository.java:81) - Account table add record request.
+INFO  | 2021-06-09 19:33:53 | [main] repositories.AccountRepository (AccountRepository.java:53) - Account table view by ID request.
+INFO  | 2021-06-09 19:36:35 | [main] repositories.AccountRepository (AccountRepository.java:81) - Account table add record request.
+INFO  | 2021-06-09 19:36:35 | [main] repositories.AccountRepository (AccountRepository.java:53) - Account table view by ID request.
+INFO  | 2021-06-09 19:42:30 | [main] repositories.AccountRepository (AccountRepository.java:81) - Account table add record request.
+INFO  | 2021-06-09 19:42:30 | [main] repositories.AccountRepository (AccountRepository.java:53) - Account table view by ID request.
+INFO  | 2021-06-09 19:44:42 | [main] repositories.AccountRepository (AccountRepository.java:81) - Account table add record request.
+INFO  | 2021-06-09 19:44:42 | [main] repositories.AccountRepository (AccountRepository.java:53) - Account table view by ID request.
