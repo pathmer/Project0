@@ -17,12 +17,12 @@ public class TransactionRepositoryTests {
 	public void getAllTransactionTest() {
 		
 		List<Transaction> transactions = new ArrayList<Transaction>();
-		Transaction t1 = new Transaction(1, "deposit", 1000.0, 1, 11, 111111111, "completed", 0, 2);
-		Transaction t2 = new Transaction(2, "withdrawl", 50.0, 11, 1, 111111111, "completed", 0, 2);
-		Transaction t3 = new Transaction(3, "transferout", 300.0, 11, 21, 111111111, "completed", 1, 2);
-		Transaction t4 = new Transaction(4, "transferin", 300.0, 11, 21, 222222222, "completed", 1, 4);
-		Transaction t5 = new Transaction(5, "transferout", 200.0, 11, 21, 111111111, "pending", 2, 2);
-		Transaction t6 = new Transaction(6, "transferin", 200.0, 11, 21, 222222222, "pending", 2, 4);
+		Transaction t1 = new Transaction(1, "deposit", 1000.0, 1, 2, 111111111, "completed", 0, 2);
+		Transaction t2 = new Transaction(2, "withdrawal", 50.0, 2, 1, 111111111, "completed", 0, 2);
+		Transaction t3 = new Transaction(3, "transferout", 300.0, 2, 4, 111111111, "completed", 100, 2);
+		Transaction t4 = new Transaction(4, "transferin", 300.0, 2, 4, 111111111, "completed", 100, 4);
+		Transaction t5 = new Transaction(5, "transferout", 200.0, 4, 2, 222222222, "pending", 200, 4);
+		Transaction t6 = new Transaction(6, "transferin", 200.0, 4, 2, 222222222, "pending", 200, 2);
 		
 		transactions.add(t1);
 		transactions.add(t2);
@@ -45,7 +45,7 @@ public class TransactionRepositoryTests {
 	@Test
 	public void getTransactionByIdTest() {
 		
-		Transaction t2 = new Transaction(2, "withdrawl", 50.0, 11, 1, 111111111, "completed", 0, 2);
+		Transaction t2 = new Transaction(2, "withdrawal", 50.0, 2, 1, 111111111, "completed", 0, 2);
 		
 		System.out.println(t2);
 		System.out.println(tr.getById(2));
@@ -56,7 +56,7 @@ public class TransactionRepositoryTests {
 	@Test
 	public void addTransactionTest() {
 		
-		Transaction t7 = new Transaction(7, "withdrawl", 150.0, 11, 1, 111111111, "pending", 0, 2);
+		Transaction t7 = new Transaction(7, "withdrawal", 150.0, 2, 1, 111111111, "pending", 0, 2);
 		
 		Assert.assertEquals(t7, tr.add(t7));
 		
@@ -68,7 +68,7 @@ public class TransactionRepositoryTests {
 	@Test
 	public void updateTransactionTest() {
 		
-		Transaction t7 = new Transaction(7, "withdrawl", 150.0, 11, 1, 111111111, "completed", 0, 2);
+		Transaction t7 = new Transaction(7, "withdrawal", 150.0, 2, 1, 111111111, "completed", 0, 2);
 		
 		Assert.assertEquals(t7, tr.update(t7));
 		
@@ -80,7 +80,7 @@ public class TransactionRepositoryTests {
 	@Test
 	public void deleteTransactionTest() {
 		
-		Transaction t7 = new Transaction(7, "withdrawl", 150.0, 11, 1, 111111111, "completed", 0, 2);
+		Transaction t7 = new Transaction(7, "withdrawal", 150.0, 2, 1, 111111111, "completed", 0, 2);
 		
 		Assert.assertEquals(true, tr.delete(t7.getId()));
 	
@@ -90,11 +90,9 @@ public class TransactionRepositoryTests {
 	public void getByTypeTest() {
 		
 		List<Transaction> transactions = new ArrayList<Transaction>();
-		Transaction t4 = new Transaction(4, "transferin", 300.0, 11, 21, 222222222, "completed", 1, 4);
-		Transaction t6 = new Transaction(6, "transferin", 200.0, 11, 21, 222222222, "pending", 2, 4);
+		Transaction t4 = new Transaction(4, "transferin", 300.0, 2, 4, 111111111, "completed", 100, 4);
 	
 		transactions.add(t4);
-		transactions.add(t6);
 	
 		Assert.assertEquals(transactions, tr.getByTtype("transferin", 4));
 		
@@ -103,14 +101,14 @@ public class TransactionRepositoryTests {
 	}
 	
 	@Test
-	public void getBankingAccountsTest() {
+	public void getByBankingAccountsTest() {
 		
 		List<Transaction> transactions = new ArrayList<Transaction>();
-		Transaction t4 = new Transaction(4, "transferin", 300.0, 11, 21, 222222222, "completed", 1, 4);
-		Transaction t6 = new Transaction(6, "transferin", 200.0, 11, 21, 222222222, "pending", 2, 4);
+		Transaction t4 = new Transaction(4, "transferin", 300.0, 2, 4, 111111111, "completed", 100, 4);
+		Transaction t5 = new Transaction(5, "transferout", 200.0, 4, 2, 222222222, "pending", 200, 4);
 	
 		transactions.add(t4);
-		transactions.add(t6);
+		transactions.add(t5);
 
 	
 		Assert.assertEquals(transactions, tr.getByAccount(4));
@@ -123,14 +121,14 @@ public class TransactionRepositoryTests {
 	public void getByTransferIdTest() {
 		
 		List<Transaction> transactions = new ArrayList<Transaction>();
-		Transaction t5 = new Transaction(5, "transferout", 200.0, 11, 21, 111111111, "pending", 2, 2);
-		Transaction t6 = new Transaction(6, "transferin", 200.0, 11, 21, 222222222, "pending", 2, 4);
+		Transaction t5 = new Transaction(5, "transferout", 200.0, 4, 2, 222222222, "pending", 200, 4);
+		Transaction t6 = new Transaction(6, "transferin", 200.0, 4, 2, 222222222, "pending", 200, 2);
 	
 		transactions.add(t5);
 		transactions.add(t6);
 
 	
-		Assert.assertEquals(transactions, tr.getByTransferId(2));
+		Assert.assertEquals(transactions, tr.getByTransferId(200));
 		
 		System.out.println(tr.getByTransferId(2));
 		

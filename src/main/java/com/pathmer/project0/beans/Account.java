@@ -150,7 +150,7 @@ public class Account {
 			return "No account selected.";
 		}
 		else {
-			return "Account Number = " + accnumber + " , Type = " + atype + " , Balance = $" + balance + " , Status = " + astatus;
+			return "Account Number = " + accnumber + " , Type = " + atype + " , Balance = $" + String.format("%.2f", balance) + " , Status = " + astatus;
 		}
 	}
 }

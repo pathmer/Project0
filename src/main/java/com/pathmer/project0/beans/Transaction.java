@@ -186,11 +186,11 @@ public class Transaction {
 	}
 
 	public String userView() {
-		return "Transaction [ Amount = $" + amount + " , Type = " + ttype + " ]";
+		return "Transaction [ Amount = $" + String.format("%.2f", amount) + " , Type = " + ttype + " ]";
 	}
 
 	public String userTransfer() {
-		return "Transaction [ Amount = $" + amount + " , Type = " + ttype + " , Status = " + tstatus + " , Transfer ID = " + transferid + " ]";
+		return "Transaction [ Amount = $" + String.format("%.2f",amount) + " , Type = " + ttype + " , Status = " + tstatus + " , Transfer ID = " + transferid + " ]";
 	}
 
 }

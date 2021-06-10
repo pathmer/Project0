@@ -34,7 +34,7 @@ public class CustomerServices {
 				System.out.println("Options:");
 				System.out.println("1. Select different bank account");
 				System.out.println("2. View all bank accounts");
-				System.out.println("3. View bank account's transactions");
+				System.out.println("3. View bank account's completed transactions");
 				System.out.println("4. Withdrawal");
 				System.out.println("5. Deposit");
 				System.out.println("6. Electronic funds transfers (EFT)");
@@ -88,13 +88,13 @@ public class CustomerServices {
 				  		break;
 				  		
 				  	case "3":
-				  		// View bank account's transactions
+				  		// View bank account's completed transactions
 				  		System.out.println(Main.nm);
 				  		if (selaccount == null) {
 				  			System.out.println("First select a valid bank account.");
 				  		}
 				  		else {
-							System.out.println("All transactions For bank account: " + selaccount.getAccnumber());
+							System.out.println("All completed transactions For bank account: " + selaccount.getAccnumber());
 							System.out.println("\n");
 				  			List<Transaction> sbatransactions = new ArrayList<Transaction>();
 				  			sbatransactions = tr.getByAccount(selaccount.getId());

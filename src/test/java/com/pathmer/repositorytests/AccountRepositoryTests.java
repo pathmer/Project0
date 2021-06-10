@@ -16,7 +16,7 @@ public class AccountRepositoryTests {
 	public void getAllAccountTest() {
 		
 		List<Account> accounts = new ArrayList<Account>();
-		Account a1 = new Account(1, 1, "deposits/withdrawls", 950.0, "active", 1);
+		Account a1 = new Account(1, 1, "BANK", 950.0, "active", 1);
 		Account a2 = new Account(2, 2, "checking", 650.0, "active", 2);
 		Account a3 = new Account(3, 3, "savings", 0.0, "pending", 2);
 		Account a4 = new Account(4, 4, "checking", 300.0, "active", 3);
@@ -124,18 +124,6 @@ public class AccountRepositoryTests {
 		System.out.println(ar.getByAccNumber(2));
 		
 		Assert.assertEquals(a2, ar.getById(2));
-	}
-	
-	@Test
-	public void getTest() {
-		
-		Account sbaaccount = new Account();
-		sbaaccount = ar.getByAccNumber(11);
-		
-
-		System.out.println(sbaaccount == null);
-		
-		Assert.assertEquals(ar.getById(2), ar.getById(2));
 	}
 	
 }
